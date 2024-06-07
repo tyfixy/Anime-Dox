@@ -1,0 +1,213 @@
+/* user-authentication.css */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center items vertically */
+    min-height: 100vh;
+    box-sizing: border-box;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+.top-menu, .bottom-menu {
+    background-color: #1e1e1e;
+    width: 100%;
+}
+
+.top-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center horizontally */
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    height: 60px; /* Adjust the height as needed */
+}
+
+.logo-expanded img {
+    cursor: pointer;
+    height: 50px; /* Adjust height as needed */
+}
+
+.bottom-menu {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 10px 20px;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.2);
+    color: #ffffff; /* Ensure text color is white */
+    font-size: 13px; /* Adjust font size if needed */
+    text-align: center; /* Center align the text */
+    width: 100%;
+}
+
+.form-container {
+    background-color: #1e1e1e;
+    padding: 40px 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    margin-top: 60px; /* Add margin to ensure content is below the top menu */
+    margin-bottom: 20px; /* Add margin to ensure content is above the bottom menu */
+    flex-grow: 1; /* Ensure it grows to fit the content */
+    align-self: center; /* Center horizontally */
+}
+
+.login-form, .signup-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-form h2, .signup-form h2 {
+    margin-bottom: 10px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.login-form p, .signup-form p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.login-form a, .signup-form a {
+    color: #e64a19; /* Reddish-orange color */
+    text-decoration: none;
+}
+
+.login-form a:hover, .signup-form a:hover {
+    text-decoration: underline;
+}
+
+.divider {
+    width: 100%;
+    height: 1px;
+    background-color: #333;
+    margin: 20px 0;
+    position: relative;
+}
+
+.divider::after {
+    content: "ili";
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #1e1e1e;
+    padding: 0 10px;
+    color: #ffffff;
+}
+
+.google-login {
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.login-form label, .signup-form label {
+    align-self: flex-start;
+    margin-left: 10px; /* Add some margin to align with input fields */
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.signup-form label .required {
+    color: #e64a19; /* Reddish-orange color */
+}
+
+/* General Styles for Input Fields */
+.login-form input, .signup-form input {
+    background-color: #121212;
+    border: none; /* Remove border */
+    border-radius: 4px; /* Round edges */
+    padding: 10px;
+    margin: 5px 0;
+    color: #ffffff;
+    width: calc(100% - 20px); /* Make sure all inputs have the same width */
+    font-size: 14px;
+    box-sizing: border-box; /* Ensure padding and border are included in the width and height */
+}
+
+.login-form input:focus, .signup-form input:focus {
+    outline: none; /* Remove outline */
+}
+
+/* Specific Styles for Password Container */
+.password-container {
+    width: 100%;
+    position: relative;
+}
+
+.password-input {
+    background-color: #121212;
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
+    margin: 5px 0;
+    color: #ffffff;
+    font-size: 14px;
+    box-sizing: border-box; /* Ensure padding and border are included in the width and height */
+}
+
+.password-input:focus {
+    outline: none; /* Remove outline */
+}
+
+/* Styles for Error Messages */
+.error-text {
+    color: red;
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+.form-error {
+    margin-top: 20px;
+    color: red;
+    font-size: 14px;
+}
+
+/* Styles for Eye Icon */
+.eye-icon {
+    position: absolute;
+    right: 20px; /* Adjusted to align with other inputs */
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    display: none; /* Hide the eye icon by default */
+}
+
+/* Styles for Submit Button */
+.submit-button {
+    background-color: #e64a19; /* Original color */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #ffffff;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Add transitions */
+    font-size: 14px;
+}
+
+.submit-button:hover {
+    background-color: #ff7043; /* Lighter shade of the reddish-orange color */
+    transform: scale(1.05); /* Slightly grow the button */
+}

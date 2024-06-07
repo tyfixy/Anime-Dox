@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="bs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime Dox - Prijava</title>
+    <link rel="icon" href="../../accessories/images/Logo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../user-authentication/user-authentication.css">
+</head>
+<body>
+    <div class="top-menu">
+        <a href="../main/main.html" class="logo-expanded">
+            <img src="../../accessories/images/Logo-Expanded.png" alt="Anime Dox Logo" />
+        </a>
+    </div>
+
+    <div class="form-container">
+        <form class="login-form">
+            <h2>Prijavi se</h2>
+            <p>Niste registrovani? <a href="./signup.html">Registruj se</a></p>
+            <div class="divider"></div>
+            <button class="google-login">Nastavi sa Google</button>
+            <div class="divider"></div>
+            <label for="username">Email  /  Korisničko ime</label>
+            <input type="text" id="username" name="username" placeholder="Email  /  Korisničko ime">
+            <div id="username-error" class="error-text"></div>
+
+            <label for="password">Lozinka</label>
+            <div class="password-container">
+                <input type="password" id="password" name="password" placeholder="Lozinka" class="password-input">
+                <span class="eye-icon" id="eye-icon">&#128065;</span>
+            </div>
+            <div id="password-error" class="error-text"></div>
+
+            <button type="submit" class="submit-button">PRIJAVI SE</button>
+            <div class="form-error"></div>
+            <p><a href="#">Zaboravili ste lozinku?</a></p>
+        </form>
+    </div>
+
+    <div class="bottom-menu">
+        <!-- No text for bottom menu -->
+    </div>
+
+    <!-- Main content of the website goes here -->
+    <script src="../user-authentication/login.js"></script>
+    <script src="../user-authentication/toggle-password.js"></script>
+</body>
+</html>
